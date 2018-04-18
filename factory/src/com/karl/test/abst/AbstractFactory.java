@@ -6,8 +6,7 @@ public abstract class AbstractFactory {
 
     private String name;
 
-    public AbstractFactory() {
-    }
+    public AbstractFactory() { }
 
     public String getName() {
         return name;
