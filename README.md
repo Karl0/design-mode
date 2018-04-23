@@ -11,3 +11,8 @@
 
 ### 原型模式
 ### [prototype](https://github.com/Karl0/java/tree/master/prototype "ps：浅拷贝&深拷贝")
+<hr>
+
+
+### 代理模式
+### [proxy](https://github.com/Karl0/java/tree/master/proxy "ps:JDK动态代理&CGLIB动态代理")
