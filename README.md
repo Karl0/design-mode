@@ -16,3 +16,13 @@
 
 ### 代理模式
 ### [proxy](https://github.com/Karl0/java/tree/master/proxy "ps:JDK动态代理&CGLIB动态代理")
+<hr>
+
+
+### 策略模式
+### [strategy](https://github.com/Karl0/java/tree/master/strategy "ps:购物订单")
+<hr>
+
+
+### 模板模式
+### [template](https://github.com/Karl0/java/tree/master/template "ps:JDBCTemplate")
