@@ -17,7 +17,7 @@ public class JDBCTemplate {
     }
 
     private Connection getConnection() throws SQLException {
-        return this.dataSource.getConnection("", "");
+        return this.dataSource.getConnection();
     }
 
     private PreparedStatement createPreparedStatement(Connection conn, String sql) throws SQLException {
@@ -25,6 +25,9 @@ public class JDBCTemplate {
     }
 
     private ResultSet executeQuery(PreparedStatement ps, Object ... values) throws SQLException {
+        if(values == null || values.length == 0){
+            return ps.executeQuery();
+        }
         for (int i = 0; i < values.length; i++) {
             ps.setObject(i + 1, values[i]);
         }

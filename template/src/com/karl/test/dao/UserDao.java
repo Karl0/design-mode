@@ -1,18 +1,27 @@
 package com.karl.test.dao;
 
+import com.alibaba.druid.pool.DruidDataSource;
 import com.karl.test.entity.User;
 import com.karl.test.template.JDBCTemplate;
 import com.karl.test.template.RowMapper;
 
 import javax.sql.DataSource;
-import java.lang.reflect.AnnotatedType;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
 public class UserDao {
 
-    private JDBCTemplate JdbcTemplate = new JDBCTemplate(null);
+    private static DruidDataSource dataSource;
+    static {
+        dataSource = new DruidDataSource();
+        dataSource.setDriverClassName("com.mysql.jdbc.Driver");
+        dataSource.setUrl("jdbc:mysql://localhost:3306/test?useSSL=false");
+        dataSource.setUsername("root");
+        dataSource.setPassword("123karl321");
+    }
+
+    private JDBCTemplate JdbcTemplate = new JDBCTemplate(dataSource);
 
     public List<?> queryAll(String tableName){
         String sql = "select * from " + tableName;
