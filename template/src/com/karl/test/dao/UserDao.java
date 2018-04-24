@@ -5,7 +5,6 @@ import com.karl.test.entity.User;
 import com.karl.test.template.JDBCTemplate;
 import com.karl.test.template.RowMapper;
 
-import javax.sql.DataSource;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
@@ -17,8 +16,8 @@ public class UserDao {
         dataSource = new DruidDataSource();
         dataSource.setDriverClassName("com.mysql.jdbc.Driver");
         dataSource.setUrl("jdbc:mysql://localhost:3306/test?useSSL=false");
-        dataSource.setUsername("root");
-        dataSource.setPassword("123karl321");
+        dataSource.setUsername("*****");
+        dataSource.setPassword("**********");
     }
 
     private JDBCTemplate JdbcTemplate = new JDBCTemplate(dataSource);
