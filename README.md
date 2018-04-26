@@ -26,3 +26,13 @@
 
 ### 模板模式
 ### [template](https://github.com/Karl0/design-mode/tree/master/template "ps:JDBCTemplate")
+<hr>
+
+
+### 委派模式
+### [delegate](https://github.com/Karl0/design-mode/tree/master/delegate)
+<hr>
+
+
+### 适配器模式
+### [adapter](https://github.com/Karl0/design-mode/tree/master/adapter "ps:登陆")
