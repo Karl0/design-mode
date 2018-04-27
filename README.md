@@ -36,3 +36,8 @@
 
 ### 适配器模式
 ### [adapter](https://github.com/Karl0/design-mode/tree/master/adapter "ps:登陆")
+<hr>
+
+
+### 装饰器模式
+### [decorator](https://github.com/Karl0/design-mode/tree/master/decorator "ps:登陆")
