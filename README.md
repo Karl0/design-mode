@@ -41,3 +41,8 @@
 
 ### 装饰器模式
 ### [decorator](https://github.com/Karl0/design-mode/tree/master/decorator "ps:登陆")
+<hr>
+
+
+### 观察者模式
+### [observer](https://github.com/Karl0/design-mode/tree/master/observer "ps:鼠标事件监听")

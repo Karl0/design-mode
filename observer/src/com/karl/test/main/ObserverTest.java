@@ -13,16 +13,23 @@ import java.lang.reflect.Method;
 public class ObserverTest {
 
     public static void main(String[] args) {
-        MouseEventListener listener = new MouseEventListener();
         try {
+            //创建鼠标事件监听器
+            MouseEventListener listener = new MouseEventListener();
+            //获取鼠标事件回调方法
             Method clickCallback = MouseClickCallback.class.getMethod("callback", new Class[]{MouseEvent.class});
             MouseEventCallback mouseClickCallback = new MouseClickCallback();
             MouseHandler handler = new MouseHandler();
-            handler.addListener("click", mouseClickCallback, clickCallback);
-
             Mouse mouse = (Mouse)handler.newInstance(new WirelessMouse());
+
+            //添加鼠标监听事件
+            handler.addListener("click", mouseClickCallback, clickCallback);
             mouse.click();
-            //mouse.up();
+
+            //移除鼠标监听事件
+            handler.removeListener("click");
+            mouse.click();
+
         } catch (NoSuchMethodException e) {
             e.printStackTrace();
         }
